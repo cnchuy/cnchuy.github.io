@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Dataset Statistics</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://www.torontomu.ca/tmu_favicon.ico" type="image/x-icon/">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/*html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}*/
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+/*div.w3-container { padding-top: 80px; }*/
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+h3 a {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+<body onload="get_param()">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-dark-grey w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="cover.html" class="w3-bar-item w3-button w3-theme-l1"> Dataset Visualizing Tool </a>
+    <a id="wikiQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('wikiQA')">WikiQA </a>
+		<a id="NQ" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('NQ')">Natural Questions </a>
+		<a id="trecQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('trecQA')">TREC </a>
+		<a id="AQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('AQA')">AdversarialQA </a>
+		<a id="SQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('SQA')">Simple Question </a>
+		<a id="SQuAD" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('SQuAD')">SQuAD </a>
+		<a id="GoT" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('GoT')">Game of Thrones </a>
+		<a id="triviaQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('triviaQA')">TriviaQA </a>
+		<a id="searchQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('searchQA')">SearchQA </a>
+		<a id="tweetQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('tweetQA')">TweetQA </a>
+    <a href="./compare.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Compare Dataset Tool</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4><a class="w3-bar-item w3-button" href="./home.html"><b>Menu</b></a></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#summary">Summary</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#qType">Question Type</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#aType">Answer Type</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#QAsim">QA Similarity</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#gender">Gender Distribution</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#sentiment">Sentiment Analysis</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#wordCloud">Word Representation</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px" id="main">
+
+  <!-- Header -->
+  <div class="w3-container w3-padding-64" id="dataset">
+    <h1 class="w3-jumbo" id="QAname"><b>WikiQA Dataset</b></h1>
+    <div class="w3-responsive w3-card-4" style="height:500px;overflow:auto;" id="snippet"></div>
+    <div id="wikiQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52419">WikiQA Corpus</a></h3>
+      <h3>Paper: <a href="https://aclanthology.org/D15-1237/">WikiQA: A Challenge Dataset for Open-Domain Question Answering</a></h3>
+    </div>
+    <div id="NQ_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://ai.google.com/research/NaturalQuestions">Google's Natural Questions</a></h3>
+      <h3>Paper: <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00276/43518/Natural-Questions-A-Benchmark-for-Question">Natural Questions: A Benchmark for Question Answering Research</a></h3>
+    </div>
+    <div id="trecQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://trec.nist.gov/data/qamain.html">Text REtrieval Conference (TREC) QA Track</a></h3>
+      <h3>Paper: <a href="https://aclanthology.org/D07-1003/">What is the Jeopardy Model? A Quasi-Synchronous Grammar for QA</a></h3>
+    </div>
+    <div id="AQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://adversarialqa.github.io/index.html">AdversarialQA Corpus</a></h3>
+      <h3>Paper: <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00338/96474/Beat-the-AI-Investigating-Adversarial-Human">Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</a></h3>
+    </div>
+    <div id="SQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://github.com/davidgolub/SimpleQA/tree/master/datasets/SimpleQuestions">The SimpleQuestions Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/abs/1506.02075">Large-scale Simple Question Answering with Memory Networks</a></h3>
+    </div>
+    <div id="SQuAD_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://rajpurkar.github.io/SQuAD-explorer/">The Stanford Question Answering Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/abs/1606.05250">SQuAD: 100,000+ Questions for Machine Comprehension of Text</a></h3>
+    </div>
+    <div id="GoT_links" class="links" style="display:none;">
+      <!-- <h3>Website: <a href="https://trec.nist.gov/data/qamain.html">Text REtrieval Conference (TREC) QA Track</a></h3> -->
+      <h3>Paper: <a href="https://link.springer.com/chapter/10.1007/978-3-030-99739-7_21">GameOfThronesQA: Answer-Aware Question-Answer Pairs for TV Series</a></h3>
+    </div>
+    <div id="triviaQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://nlp.cs.washington.edu/triviaqa/">TriviaQA Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1705.03551.pdf">TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension</a></h3>
+    </div>
+    <div id="searchQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://github.com/nyu-dl/dl4ir-searchQA">searchQA Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1704.05179.pdf">SearchQA: A New Q&A Dataset Augmented with Context from a Search Engine</a></h3>
+    </div>
+    <div id="tweetQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://tweetqa.github.io/">Question Answering in Social Media</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1907.06292.pdf">TWEETQA: A Social Media Focused Question Answering Dataset</a></h3>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="summary">
+    <h1 class="w3-text-teal">Summary</h1>
+    <div class="w3-row-padding">
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-center">
+            <h3>1,242</h3>
+            <h4>Unique Questions</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-center">
+            <h3>6.46</h3>
+            <h4>Average Words per Question</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-center">
+            <h3>11,406</h3>
+            <h4>Unique Answers</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-text-white w3-padding-16">
+          <div class="w3-center">
+            <h3>25.36</h3>
+            <h4>Average Words per Answer</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="w3-row-padding">
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-center">
+            <h3>12,153</h3>
+            <h4>Question-Answer Pairs</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-center">
+            <h3>9.78</h3>
+            <h4>Candidate Answers per Question</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-center">
+            <h3>1.18</h3>
+            <h4>Relevant Answers per Question</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-text-white w3-padding-16">
+          <div class="w3-center">
+            <h3>1:9</h3>
+            <h4>Relevant VS Non-Relevant Answers</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64">
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <img id="qlen" src="./images/wikiQA_qlen.png" width="100%" alt="question length distribution">
+        <h3>Question Length distirbution</h3>
+        <p>Shows the length distribution in question set</p>
+      </div>
+
+      <div class="w3-half">
+        <img id="alen" src="./images/wikiQA_alen.png" width="100%" alt="answer length distribution">
+        <h3>Answer Length distirbution</h3>
+        <p>Shows the length distribution in answer set</p>
+      </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">�</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="qType">
+    <h1 class="w3-text-teal">Question Type</h1>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <!-- <img src="./images/wikiQA_qType.png" width="100%" onclick="onClick(this)" alt="question word representation"> -->
+        <img id="qtype" src="./images/wikiQA_qType.png" width="100%" alt="question word representation">
+        <h3>Question Type distribution</h3>
+        <p>Shows the distribution of "wh-" type in question set</p>
+      </div>
+
+      <div class="w3-half">
+        <img id="trigram" src="./images/wikiQA_trigram.png" width="100%" alt="trigram of questions">
+        <h3>First three words of questions</h3>
+        <p>Shows the distribution of the first 3 words in question set</p>
+      </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="aType">
+    <h1 class="w3-text-teal">Answer Type</h1>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <img id="atype" src="./images/wikiQA_aType.png" width="100%" alt="question word representation">
+        <h3>Answer Type distribution</h3>
+        <p>Shows the distribution of ansnwer type in answer set</p>
+      </div>
+
+      <div class="w3-half">
+        <img id="apq" src="./images/wikiQA_apq.png" width="100%" alt="answer per question distribution">
+        <h3>Answer Per Question distirbution</h3>
+        <p>Shows the distribution of candidate answers per question</p>
+      </div>
+  </div>
+
+  <div class="w3-container">
+  <div class="w3-responsive w3-card-4">
+  <table class="w3-table w3-striped w3-bordered">
+  <thead>
+  <tr class="w3-theme">
+    <th>Named Entity</th>
+    <th>Description Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>PERSON</td>
+    <td>People, including fictional</td>
+  </tr>
+  <tr>
+    <td>NORP</td>
+    <td>Nationalities or religious or political groups</td>
+  </tr>
+  <tr>
+    <td>FAC</td>
+    <td>Buildings, airports, highways, bridges, etc.</td>
+  </tr>
+  <tr>
+    <td>ORG</td>
+    <td>Companies, agencies, institution, etc.</td>
+  </tr>
+  <tr>
+    <td>GPE</td>
+    <td>Countries, cities, states</td>
+  </tr>
+  <tr>
+    <td>LOC</td>
+    <td>Non-GPE locations, mountain ranges, bodies of water</td>
+  </tr>
+  <tr>
+    <td>PRODUCT</td>
+    <td>Objects, vehicles, foods, etc.</td>
+  </tr>
+  <tr>
+    <td>EVENT</td>
+    <td>Named hurricanes, battles, wars, sports events, etc. </td>
+  </tr>
+  <tr>
+    <td>WORK_OF_ART</td>
+    <td>Titles of books, songs, etc.</td>
+  </tr>
+  <tr>
+    <td>LAW</td>
+    <td>Named documents made into low</td>
+  </tr>
+  <tr>
+    <td>LANGUAGE</td>
+    <td>Any named language</td>
+  </tr>
+  <tr>
+    <td>DATE</td>
+    <td>Absolute or relative dates or period</td>
+  </tr>
+  <tr>
+    <td>TIME</td>
+    <td>Times smaller than a day</td>
+  </tr>
+  <tr>
+    <td>PERCENT</td>
+    <td>Percentage, including "%"</td>
+  </tr>
+  <tr>
+    <td>MONEY</td>
+    <td>Monetary values, including unit</td>
+  </tr>
+  <tr>
+    <td>QUANTITY</td>
+    <td>Measurements, as weight or distance</td>
+  </tr>
+  <tr>
+    <td>ORDINAL</td>
+    <td>first, second, etc. </td>
+  </tr>
+  <tr>
+    <td>CARDINAL</td>
+    <td>Numerals that do not fall under another type</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="QAsim">
+    <h1 class="w3-text-teal">Question and Answers</h1>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <!-- <img src="./images/wikiQA_qType.png" width="100%" onclick="onClick(this)" alt="question word representation"> -->
+        <img id="qasim" src="./images/wikiQA_QAsim.png" width="100%" alt="question-answer similarity">
+        <h3>Question and Answer similarity distribution</h3>
+        <p>Shows the distribution of similarity between question and answer</p>
+      </div>
+
+      <div class="w3-half">
+        <img id="ngram" src="./images/wikiQA_ngrams.png" width="100%" alt="quesiton-answer word overlaps">
+        <h3>N-gram word overlaps</h3>
+        <p>Shows the distribution of words overlap between question and answer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="gender">
+    <h1 class="w3-text-teal">Gender Distribution</h1>
+
+    <div class="w3-row w3-center">
+      <div class="w3-container w3-quarter"></div>
+      <div class="w3-container w3-half">
+        <img id="gen" src="./images/wikiQA_gender.png" width="100%" alt="gender distribution">
+        <h3>Gender Distribution</h3>
+        <p>Shows the gender distribution in dataset</p>
+      </div>
+      <div class="w3-container w3-quarter"></div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="sentiment">
+    <h1 class="w3-text-teal">Sentiment Analysis</h1>
+
+    <div class="w3-row w3-center">
+      <div class="w3-container w3-quarter"></div>
+      <div class="w3-container w3-half">
+        <img id="sa" src="./images/wikiQA_sentiment.png" width="100%" alt="sentiment analysis">
+        <h3>Sentiment Analysis</h3>
+        <p>Shows sentiment analysis of each QA pair</p>
+      </div>
+      <div class="w3-container w3-quarter"></div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="wordCloud">
+    <h1 class="w3-text-teal">Word Cloud</h1>
+
+    <div class="w3-row w3-center">
+      <div class="w3-container w3-quarter"></div>
+      <div class="w3-container w3-half">
+        <img id="wc" src="./images/wikiQA_wc.png" width="100%" alt="corpus word representation">
+        <h3>Dataset Word Representation</h3>
+        <p>Shows the word representation of the whole dataset</p>
+      </div>
+      <div class="w3-container w3-quarter"></div>
+    </div>
+
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <img id="qwc" src="./images/wikiQA_qwc.png" width="100%" alt="question word representation">
+        <!-- <img src="https://drive.google.com/uc?id=1TJy6M4Ew6RltHiCj-Z8UfdT4qIO2_ugu&export=view" width="100%" alt="question word representation"> -->
+        <h3>Question Word Representation</h3>
+        <p>Shows the word representation of the question set</p>
+      </div>
+
+      <div class="w3-half">
+        <img id="awc" src="./images/wikiQA_awc.png" width="100%" alt="answer word representation">
+        <h3>Answer Word Representation</h3>
+        <p>Shows the word representation of the answer set</p>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- END MAIN -->
+</div>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function arrayToTable(tableData) {
+    // alert(tableData);
+    var table = '<table class="w3-table w3-striped w3-bordered">';
+    table += '<thead><tr class="w3-theme"><th>Qid</th><th>Question</th><th>Answer</th><th>Label</th></tr></thead>'
+    table += '<tbody>';
+    // alert(tableData.length);
+    for (var i=0; i<tableData.length; i++) {
+      rowData = tableData[i];
+      var row = '<tr>';
+      for (var j=0; j<rowData.length; j++) {
+          row += '<td>'+rowData[j]+'</td>';
+      }
+      table += row + '</tr>';
+    }
+    table += '</tbody></table>';
+    return table;
+}
+
+function get_samples(file) {
+  // alert("start");
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    // $('#snippet').html(arrayToTable(Papa.parse(this.responseText).data));
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("snippet").innerHTML = arrayToTable(Papa.parse(this.responseText).data);
+    }
+  };
+  xhttp.open("GET", file, true);
+  xhttp.send();
+  // alert("end");
+}
+
+function arrayToDashboard(tableData) {
+    // alert(tableData);
+    var dashboard = '<h1 class="w3-text-teal">Summary</h1><div class="w3-row-padding">';
+    // alert(tableData.length);
+    for (var i=0; i<tableData.length; i++) {
+      rowData = tableData[i];
+      if (i>0 && i%4==0) {
+        dashboard += '</div><br><div class="w3-row-padding">';
+      }
+      var row = '<div class="w3-quarter"><div class="w3-container w3-teal w3-padding-16"><div class="w3-center">';
+      for (var j=0; j<rowData.length; j++) {
+        if (j==0) {
+          row += '<h3>'+rowData[j]+'</h3>';
+        } else {
+          row += '<h4>'+rowData[j]+'</h4>';
+        }
+        // alert(row);
+      }
+      dashboard += row + '</div></div></div>';
+    }
+    dashboard += '</div>';
+    return dashboard;
+}
+
+function get_summary(file) {
+  // alert("start");
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    // $('#snippet').html(arrayToTable(Papa.parse(this.responseText).data));
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("summary").innerHTML = arrayToDashboard(Papa.parse(this.responseText).data);
+    }
+  };
+  xhttp.open("GET", file, true);
+  xhttp.send();
+  // alert("end");
+}
+
+function update_graphs(ds) {
+  document.getElementById("qlen").src="./images/"+ds+"_qlen.png";
+  document.getElementById("alen").src="./images/"+ds+"_alen.png";
+  document.getElementById("qtype").src="./images/"+ds+"_qType.png";
+  document.getElementById("trigram").src="./images/"+ds+"_trigram.png";
+  document.getElementById("atype").src="./images/"+ds+"_aType.png";
+  document.getElementById("apq").src="./images/"+ds+"_apq.png";
+  document.getElementById("qasim").src="./images/"+ds+"_QAsim.png";
+  document.getElementById("ngram").src="./images/"+ds+"_ngrams.png";
+  document.getElementById("gen").src="./images/"+ds+"_gender.png";
+  document.getElementById("wc").src="./images/"+ds+"_wc.png";
+  document.getElementById("qwc").src="./images/"+ds+"_qwc.png";
+  document.getElementById("sa").src="./images/"+ds+"_sentiment.png"
+  document.getElementById("awc").src="./images/"+ds+"_awc.png";
+}
+
+function show_links(name) {
+  var x = document.getElementsByClassName("links");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(name).style.display = "block";
+}
+
+function load_data(ds) {
+  // <h1 class="w3-jumbo" id="QAname"><b>WikiQA Dataset</b></h1>
+  var name = document.getElementById(ds).innerHTML;
+  document.getElementById("QAname").innerHTML = "<b>"+ name + " Dataset</b>";
+  var ds_data = "./data/"+ds+"100samples.csv";
+  get_samples(ds_data);
+  var l = ds+"_links";
+  show_links(l);
+  var ds_sum = "./data/"+ds+"summary.csv";
+  get_summary(ds_sum);
+  update_graphs(ds);
+
+}
+
+function get_param() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const ds = urlParams.get('ds');
+  load_data(ds);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Dataset Statistics</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://www.torontomu.ca/tmu_favicon.ico" type="image/x-icon/">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/*html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}*/
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+/*div.w3-container { padding-top: 80px; }*/
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 87%;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-dark-grey w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="cover.html" class="w3-bar-item w3-button w3-theme-l1"> Dataset Visualizing Tool </a>
+    <a href="./details.html?ds=wikiQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">WikiQA </a>
+		<a href="./details.html?ds=NQ" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Natural Questions </a>
+		<a href="./details.html?ds=trecQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">TREC </a>
+		<a href="./details.html?ds=AQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">AdversarialQA </a>
+		<a href="./details.html?ds=SQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Simple Question </a>
+		<a href="./details.html?ds=SQuAD" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">SQuAD </a>
+		<a href="./details.html?ds=GoT" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Game of Thrones </a>
+		<a href="./details.html?ds=triviaQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">TriviaQA </a>
+		<a href="./details.html?ds=searchQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">SearchQA </a>
+		<a href="./details.html?ds=tweetQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">TweetQA </a>
+    <a href="./compare.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey w3-white">Compare Dataset Tool</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4><a class="w3-bar-item w3-button" href="./home.html"><b>Menu</b></a></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#summary">Summary</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#qType">Question Type</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#aType">Answer Type</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#QAsim">QA Similarity</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#gender">Gender Distribution</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#sentiment">Sentiment Analysis</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#wordCloud">Word Representation</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px" id="main">
+
+  <div class="sticky w3-bar-block">
+    <div class="w3-container w3-padding-64" id="header">
+      <div class="w3-row-padding w3-center">
+        <div class="w3-half">
+          <div class="w3-dropdown-hover">
+            <h1 class="w3-text-teal">Dataset</h1>
+            <select id="ds1" onchange="updateDS1(this.value)" class="w3-bar-item w3-button w3-card-4 w3-bar-block">
+              <option value="">Choose one Dataset</option>
+              <option value="wikiQA">wikiQA</option>
+              <option value="NQ">Natura Questions</option>
+              <option value="trecQA">TREC</option>
+              <option value="AQA">AdversarialQA</option>
+              <option value="SQA">Simple Question</option>
+              <option value="SQuAD">SQuAD</option>
+              <option value="GoT">Game of Thrones</option>
+              <option value="triviaQA">TriviaQA</option>
+              <option value="searchQA">SearchQA</option>
+              <option value="tweetQA">TweetQA</option>
+            </select>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-dropdown-hover">
+            <h1 class="w3-text-teal">Dataset</h1>
+            <select id="ds2" onchange="updateDS2(this.value)" class="w3-bar-item w3-button w3-card-4 w3-bar-block">
+              <option value="">Choose one Dataset</option>
+              <option value="wikiQA">wikiQA</option>
+              <option value="NQ">Natura Questions</option>
+              <option value="trecQA">TREC</option>
+              <option value="AQA">AdversarialQA</option>
+              <option value="SQA">Simple Question</option>
+              <option value="SQuAD">SQuAD</option>
+              <option value="GoT">Game of Thrones</option>
+              <option value="triviaQA">TriviaQA</option>
+              <option value="searchQA">SearchQA</option>
+              <option value="tweetQA">TweetQA</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="w3-container w3-padding-64" id="dataset">
+    <h1 class="w3-jumbo" id="QAname"> </h1>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="summary">
+    <h1 class="w3-text-teal">Summary</h1>
+    <div class="w3-container w3-padding-64">
+      <div class="w3-row-padding w3-center">
+        <div class="w3-half">
+          <img id="ds1_qlen" src="./images/wikiQA_qlen.png" width="100%" alt="question length distribution">
+          <h3>Question Length distirbution</h3>
+        </div>
+        <div class="w3-half">
+          <img id="ds2_qlen" src="./images/trecQA_qlen.png" width="100%" alt="question length distribution">
+          <h3>Question Length distirbution</h3>
+        </div>
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-half">
+            <img id="ds1_alen" src="./images/wikiQA_alen.png" width="100%" alt="answer length distribution">
+            <h3>Answer Length distirbution</h3>
+          </div>
+          <div class="w3-half">
+            <img id="ds2_alen" src="./images/trecQA_alen.png" width="100%" alt="answer length distribution">
+            <h3>Answer Length distirbution</h3>
+          </div>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div class="w3-container w3-padding-64" id="qType">
+    <h1 class="w3-text-teal">Question Type</h1>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <img id="ds1_qtype" src="./images/wikiQA_qType.png" width="100%" alt="question word representation">
+        <h3>Question Type distribution</h3>
+      </div>
+      <div class="w3-half">
+        <img id="ds2_qtype" src="./images/trecQA_qType.png" width="100%" alt="question word representation">
+        <h3>Question Type distribution</h3>
+      </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="aType">
+    <h1 class="w3-text-teal">Answer Type</h1>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <img id="ds1_atype" src="./images/wikiQA_aType.png" width="100%" alt="question word representation">
+        <h3>Answer Type distribution</h3>
+      </div>
+      <div class="w3-half">
+        <img id="ds2_atype" src="./images/trecQA_aType.png" width="100%" alt="question word representation">
+        <h3>Answer Type distribution</h3>
+      </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="QAsim">
+    <h1 class="w3-text-teal">Question and Answers</h1>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-half">
+        <img id="ds1_qasim" src="./images/wikiQA_QAsim.png" width="100%" alt="question-answer similarity">
+        <h3>Question and Answer similarity distribution</h3>
+      </div>
+      <div class="w3-half">
+        <img id="ds2_qasim" src="./images/trecQA_QAsim.png" width="100%" alt="question-answer similarity">
+        <h3>Question and Answer similarity distribution</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="gender">
+    <h1 class="w3-text-teal">Gender Distribution</h1>
+    <div class="w3-row w3-center">
+      <div class="w3-container w3-half">
+        <img id="ds1_gen" src="./images/wikiQA_gender.png" width="100%" alt="gender distribution">
+        <h3>Gender Distribution</h3>
+      </div>
+      <div class="w3-container w3-half">
+        <img id="ds2_gen" src="./images/trecQA_gender.png" width="100%" alt="gender distribution">
+        <h3>Gender Distribution</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="sentiment">
+    <h1 class="w3-text-teal">Sentiment Analysis</h1>
+    <div class="w3-row w3-center">
+      <div class="w3-container w3-half">
+        <img id="ds1_sa" src="./images/wikiQA_sentiment.png" width="100%" alt="sentiment analysis">
+        <h3>Sentiment Analysis</h3>
+      </div>
+      <div class="w3-container w3-half">
+        <img id="ds2_sa" src="./images/trecQA_sentiment.png" width="100%" alt="sentiment analysis">
+        <h3>Sentiment Analysis</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="wordCloud">
+    <h1 class="w3-text-teal">Word Cloud</h1>
+    <div class="w3-row w3-center">
+      <div class="w3-container w3-half">
+        <img id="ds1_wc" src="./images/wikiQA_wc.png" width="100%" alt="corpus word representation">
+        <h3>Word Representation</h3>
+      </div>
+      <div class="w3-container w3-half">
+        <img id="ds2_wc" src="./images/trecQA_wc.png" width="100%" alt="corpus word representation">
+        <h3>Word Representation</h3>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- END MAIN -->
+</div>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function arrayToTable(tableData) {
+    // alert(tableData);
+    var table = '<table class="w3-table w3-striped w3-bordered">';
+    table += '<thead><tr class="w3-theme"><th>Qid</th><th>Question</th><th>Answer</th><th>Label</th></tr></thead>'
+    table += '<tbody>';
+    // alert(tableData.length);
+    for (var i=0; i<tableData.length; i++) {
+      rowData = tableData[i];
+      var row = '<tr>';
+      for (var j=0; j<rowData.length; j++) {
+          row += '<td>'+rowData[j]+'</td>';
+      }
+      table += row + '</tr>';
+    }
+    table += '</tbody></table>';
+    return table;
+}
+
+function get_samples(file) {
+  // alert("start");
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    // $('#snippet').html(arrayToTable(Papa.parse(this.responseText).data));
+    document.getElementById("snippet").innerHTML = arrayToTable(Papa.parse(this.responseText).data);
+  }
+  xhttp.open("GET", file);
+  xhttp.send();
+  // alert("end");
+}
+
+function updateDS1(ds) {
+  document.getElementById("ds1_qlen").src="./images/"+ds+"_qlen.png";
+  document.getElementById("ds1_alen").src="./images/"+ds+"_alen.png";
+  document.getElementById("ds1_qtype").src="./images/"+ds+"_qType.png";
+  document.getElementById("ds1_atype").src="./images/"+ds+"_aType.png";
+  document.getElementById("ds1_qasim").src="./images/"+ds+"_QAsim.png";
+  document.getElementById("ds1_gen").src="./images/"+ds+"_gender.png";
+  document.getElementById("ds1_sa").src="./images/"+ds+"_sentiment.png";
+  document.getElementById("ds1_wc").src="./images/"+ds+"_wc.png";
+}
+
+function updateDS2(ds) {
+  document.getElementById("ds2_qlen").src="./images/"+ds+"_qlen.png";
+  document.getElementById("ds2_alen").src="./images/"+ds+"_alen.png";
+  document.getElementById("ds2_qtype").src="./images/"+ds+"_qType.png";
+  document.getElementById("ds2_atype").src="./images/"+ds+"_aType.png";
+  document.getElementById("ds2_qasim").src="./images/"+ds+"_QAsim.png";
+  document.getElementById("ds2_gen").src="./images/"+ds+"_gender.png";
+  document.getElementById("ds2_sa").src="./images/"+ds+"_sentiment.png";
+  document.getElementById("ds2_wc").src="./images/"+ds+"_wc.png";
+}
+
+</script>
+
+</body>
+</html>
