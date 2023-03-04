@@ -1,0 +1,100 @@
+id,question,answer,label
+1943,"While foraging for food, a kiwi hears the sound of a predator. The kiwi",offers fruit to the predator as a peace offering.,0
+1943,"While foraging for food, a kiwi hears the sound of a predator. The kiwi",gives food to the predator.,0
+1943,"While foraging for food, a kiwi hears the sound of a predator. The kiwi",runs to a nearby burrow for shelter.,1
+1943,"While foraging for food, a kiwi hears the sound of a predator. The kiwi",runs to the predator.,0
+1944,"After having a severe allergic reaction to peanuts, Gerald",visited a tailor.,0
+1944,"After having a severe allergic reaction to peanuts, Gerald",decided to foreswear peanuts.,1
+1944,"After having a severe allergic reaction to peanuts, Gerald",purchased peanuts for friends and family.,0
+1944,"After having a severe allergic reaction to peanuts, Gerald",kicked his neighbor's cat.,0
+1945,Tom is good at study. He,is very happy.,0
+1945,Tom is good at study. He,spent half an hours to understand a knowledge while others may need 10 days.,1
+1945,Tom is good at study. He,lost his mind.,0
+1945,Tom is good at study. He,spent half ten days to understand a knowledge while others may only need 1 day.,0
+1946,"Tom live in Chicago and he wants to travel to Florida this winter, because",he loves rivers.,0
+1946,"Tom live in Chicago and he wants to travel to Florida this winter, because",it's too dangerous here.,0
+1946,"Tom live in Chicago and he wants to travel to Florida this winter, because",it's too cold here.,1
+1946,"Tom live in Chicago and he wants to travel to Florida this winter, because",he loves mountains.,0
+1947,I think I want some sushi tonight. I,will go spear dive for some fish.,0
+1947,I think I want some sushi tonight. I,am going to hunt for some fish tonight in the Maldives.,0
+1947,I think I want some sushi tonight. I,will jump into a cage with a chef and shark and ask him to make a meal for me.,0
+1947,I think I want some sushi tonight. I,like tuna rolls.,1
+1948,Tom is good at studying. He,spent ten days to understand a knowledge while others may only need 1 day.,0
+1948,Tom is good at studying. He,lost his mind.,0
+1948,Tom is good at studying. He,is very happy.,0
+1948,Tom is good at studying. He,spent half an hours to understand a knowledge while others may need 10 days.,1
+1949,Matt decided to get groceries on the way back from his other errands. Matt,killed two birds with one stone.,1
+1949,Matt decided to get groceries on the way back from his other errands. Matt,is very hungry.,0
+1949,Matt decided to get groceries on the way back from his other errands. Matt,likes fruit.,0
+1949,Matt decided to get groceries on the way back from his other errands. Matt,slew the god-emperor.,0
+1950,"I like roast turkeys. Though some people think they're a bit too dry, I",think if done properly they're wonderful.,1
+1950,"I like roast turkeys. Though some people think they're a bit too dry, I",believe they can fly while being cooked in the oven.,0
+1950,"I like roast turkeys. Though some people think they're a bit too dry, I",can throw them into the air.,0
+1950,"I like roast turkeys. Though some people think they're a bit too dry, I",really want to turn them around.,0
+1951,"At the concert,",a baseball team played catch.,0
+1951,"At the concert,",security confronted a pickpocket.,1
+1951,"At the concert,",the band drove home.,0
+1951,"At the concert,",the crowd played on the monkey bars.,0
+1952,"People are crossing the road when the light is green, while",the light turns blue,0
+1952,"People are crossing the road when the light is green, while",cars stop,0
+1952,"People are crossing the road when the light is green, while",cars are rushing by,1
+1952,"People are crossing the road when the light is green, while",a children is flying across the road,0
+1953,"Northwestern University is a great school, so I",should move to California,0
+1953,"Northwestern University is a great school, so I",should apply there,1
+1953,"Northwestern University is a great school, so I",go to Northeastern instead,0
+1953,"Northwestern University is a great school, so I",should not go to a University,0
+1954,I saw IBM Watson on TV the other night. I,thought Watson was scratching his nose too much.,0
+1954,I saw IBM Watson on TV the other night. I,ate some walnuts.,0
+1954,I saw IBM Watson on TV the other night. I,am feeling hungry.,0
+1954,I saw IBM Watson on TV the other night. I,don't watch Jeopardy often but this was a software outperforming a human being!,1
+1955,"Sam lives in America and is talking on an international call with Joe, who is a Canadian. Sam","lives in Mumbai, India.",0
+1955,"Sam lives in America and is talking on an international call with Joe, who is a Canadian. Sam",lives in America.,1
+1955,"Sam lives in America and is talking on an international call with Joe, who is a Canadian. Sam",lives in Canada.,0
+1955,"Sam lives in America and is talking on an international call with Joe, who is a Canadian. Sam",lives in Chicago.,0
+1956,"After being bullied by classmates, Thomas",shaved his head.,0
+1956,"After being bullied by classmates, Thomas",wrote a love letter to his teacher.,0
+1956,"After being bullied by classmates, Thomas",was afraid of going to school.,1
+1956,"After being bullied by classmates, Thomas",became the top detective in Chicago.,0
+1957,One of the bodybuilders is lifting the weights while the other is explaining the correct method of doing it. The bodybuilder,"bends and picks up the weight, begins a salsa pace, runs his hands around his weight, and spins and back.",0
+1957,One of the bodybuilders is lifting the weights while the other is explaining the correct method of doing it. The bodybuilder,lifts the weight gradually at first and then swiftly picks himself up to raise the weights.,1
+1957,One of the bodybuilders is lifting the weights while the other is explaining the correct method of doing it. The bodybuilder,works the tool like long kevin colossus for additional greats on the machine.,0
+1957,One of the bodybuilders is lifting the weights while the other is explaining the correct method of doing it. The bodybuilder,"the arms to the floor, continues clipped the weights and spins around while spinning his arms around his shoulders.",0
+1958,"For the holidays, I eat a lot of food. I",donated a sweater,0
+1958,"For the holidays, I eat a lot of food. I",planted a flower,0
+1958,"For the holidays, I eat a lot of food. I",love gingerbread cookies best,1
+1958,"For the holidays, I eat a lot of food. I",lost weight,0
+1959,"People are crossing the road when the light is green, while",cars are still rushing by,0
+1959,"People are crossing the road when the light is green, while",cars stop and let people cross the street,1
+1959,"People are crossing the road when the light is green, while",a children is flying across the road,0
+1959,"People are crossing the road when the light is green, while",the light turns blue,0
+1960,I've being eating a lot more than I used to. I will probably,fly myself into the sky.,0
+1960,I've being eating a lot more than I used to. I will probably,gain a few pounds.,1
+1960,I've being eating a lot more than I used to. I will probably,cook too much pasta than I can eat.,0
+1960,I've being eating a lot more than I used to. I will probably,trip and fell.,0
+1961,Sam's classmates pranked him by bolting his chair to the ground. The bolt,was made of metal.,1
+1961,Sam's classmates pranked him by bolting his chair to the ground. The bolt,"was a chair, a prank, and a bolt.",0
+1961,Sam's classmates pranked him by bolting his chair to the ground. The bolt,was a lightning bolt.,0
+1961,Sam's classmates pranked him by bolting his chair to the ground. The bolt,ran extremely fast.,0
+1962,A professor in math is answering a question. He,answers one could be divided by one plus one.,0
+1962,A professor in math is answering a question. He,answers two could be divided by one plus one.,1
+1962,A professor in math is answering a question. He,answers one could be divided by one minus one.,0
+1962,A professor in math is answering a question. He,answers two could be divided by one minus one.,0
+1963,Mona is trying to complete a film for her easy high school Psychology project.,Mona makes a short funny clip displaying her friends' unconscious habits.,1
+1963,Mona is trying to complete a film for her easy high school Psychology project.,Mona applies for a job as an accountant.,0
+1963,Mona is trying to complete a film for her easy high school Psychology project.,Mona participates in a secret CIA training program that specializes in psychological warfare.,0
+1963,Mona is trying to complete a film for her easy high school Psychology project.,Mona completes her trigonometry homework.,0
+1964,A dog rides on a boat with his owner. A crab,is seen crawling on the bottom of a lake.,1
+1964,A dog rides on a boat with his owner. A crab,comes out of the bikers talking.,0
+1964,A dog rides on a boat with his owner. A crab,goes steams in the mesh to the green grassy area.,0
+1964,A dog rides on a boat with his owner. A crab,walks down a staircase.,0
+1965,The captain yelled at the soldier. And the soldier trembled because the soldier was really,stupid,0
+1965,The captain yelled at the soldier. And the soldier trembled because the soldier was really,dumb,0
+1965,The captain yelled at the soldier. And the soldier trembled because the soldier was really,scared,1
+1965,The captain yelled at the soldier. And the soldier trembled because the soldier was really,trembling,0
+1966,"Zorblax, destroyer of worlds, has a local world he can destroy or a much bigger, more enticing world he only might be able to destroy if he tried. Zorblax thinks",that he is very hungry.,0
+1966,"Zorblax, destroyer of worlds, has a local world he can destroy or a much bigger, more enticing world he only might be able to destroy if he tried. Zorblax thinks",that he really likes worlds.,0
+1966,"Zorblax, destroyer of worlds, has a local world he can destroy or a much bigger, more enticing world he only might be able to destroy if he tried. Zorblax thinks",that a bird in hand is worth two in the bush.,1
+1966,"Zorblax, destroyer of worlds, has a local world he can destroy or a much bigger, more enticing world he only might be able to destroy if he tried. Zorblax thinks",that the price of real estate is too high.,0
+1967,Noah is trying to do well on his Machine Learning final.,Noah studies with his classmates and learns the material.,1
+1967,Noah is trying to do well on his Machine Learning final.,Noah hacks into his school's mainframe to uncover a conspiracy.,0
+1967,Noah is trying to do well on his Machine Learning final.,Noah gets drunk and passes out on the street.,0

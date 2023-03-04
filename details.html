@@ -16,7 +16,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 .w3-sidebar {
   z-index: 3;
   width: 250px;
-  top: 43px;
+  top: 60px;
   bottom: 0;
   height: inherit;
 }
@@ -40,20 +40,60 @@ a:active {
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+  <div class="w3-bar w3-theme w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-dark-grey w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1"> Dataset Visualizing Tool </a>
-    <a id="wikiQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('wikiQA')">WikiQA </a>
-		<a id="NQ" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('NQ')">Natural Questions </a>
-		<a id="trecQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('trecQA')">TREC </a>
-		<a id="AQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('AQA')">AdversarialQA </a>
-		<a id="SQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('SQA')">Simple Question </a>
-		<a id="SQuAD" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('SQuAD')">SQuAD </a>
-		<a id="GoT" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('GoT')">Game of Thrones </a>
-		<a id="triviaQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('triviaQA')">TriviaQA </a>
-		<a id="searchQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('searchQA')">SearchQA </a>
-		<a id="tweetQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('tweetQA')">TweetQA </a>
-    <a href="./compare.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Compare Dataset Tool</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme w3-hover-dark-grey w3-padding-16"> Dataset Visualizing Tool </a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Open Questions <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="GoT" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('GoT')">Game of Thrones </a>
+        <a id="SQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('SQA')">Simple Question </a>
+    		<a id="trecQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('trecQA')">TREC </a>
+    		<a id="tweetQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('tweetQA')">TweetQA </a>
+        <a id="wikiQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('wikiQA')">WikiQA </a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Long/Short Answers <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="AQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('AQA')">AdversarialQA </a>
+        <a id="NQ" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('NQ')">Natural Questions </a>
+        <a id="searchQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('searchQA')">SearchQA </a>
+        <a id="SQuAD" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('SQuAD')">SQuAD </a>
+        <a id="triviaQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('triviaQA')">TriviaQA </a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Multiple Choice Answers <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="ARC" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('ARC')">ARC </a>
+        <a id="CODAH" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('CODAH')">CODAH </a>
+        <a id="cosmosQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('cosmosQA')">CosmosQA </a>
+        <a id="multiRC" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('multiRC')">Multi RC </a>
+        <a id="RACE" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('RACE')">RACE </a>
+        <a id="ReClor" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('ReClor')">ReClor </a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Short Answers <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="DROP" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('DROP')">DROP </a>
+        <a id="duoRC" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('duoRC')">Duo RC </a>
+        <a id="hotpotQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('hotpotQA')">HotpotQA </a>
+        <a id="MSMARCO" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('MSMARCO')">MS MARCO </a>
+        <a id="narrativeQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('narrativeQA')">NarrativeQA </a>
+        <a id="newsQA" href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey" onclick="load_data('newsQA')">News QA </a>
+      </div>
+    </div>
+    <a href="./compare.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey w3-padding-16">Compare Dataset Tool</a>
   </div>
 </div>
 
@@ -121,6 +161,54 @@ a:active {
     <div id="tweetQA_links" class="links" style="display:none;">
       <h3>Website: <a href="https://tweetqa.github.io/">Question Answering in Social Media</a></h3>
       <h3>Paper: <a href="https://arxiv.org/pdf/1907.06292.pdf">TWEETQA: A Social Media Focused Question Answering Dataset</a></h3>
+    </div>
+    <div id="ARC_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://allenai.org/data/arc">AI2 Reasoning Challenge (ARC) 2018</a></h3>
+      <h3>Paper: <a href="http://ai2-website.s3.amazonaws.com/publications/AI2ReasoningChallenge2018.pdf">Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge</a></h3>
+    </div>
+    <div id="CODAH_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://github.com/Websail-NU/CODAH">CODAH Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1904.04365.pdf">CODAH: An Adversarially-Authored Question Answering Dataset for Common Sense</a></h3>
+    </div>
+    <div id="hotpotQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://hotpotqa.github.io/">Hotpot QA Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1809.09600.pdf">HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering</a></h3>
+    </div>
+    <div id="MSMARCO_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://microsoft.github.io/msmarco/">MS MARCO Dataset</a></h3>
+      <h3>Paper: <a href="https://ceur-ws.org/Vol-1773/CoCoNIPS_2016_paper9.pdf">MS MARCO: A Human Generated MAchine Reading COmprehension Dataset</a></h3>
+    </div>
+    <div id="multiRC_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://cogcomp.seas.upenn.edu/multirc/">MultiRC Dataset</a></h3>
+      <h3>Paper: <a href="https://cogcomp.seas.upenn.edu/papers/2018-MultiRC-NAACL.pdf">Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences</a></h3>
+    </div>
+    <div id="newsQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://www.microsoft.com/en-us/research/project/newsqa-dataset/">NewsQA Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1611.09830.pdf">NewsQA: A Machine COmprehension Dataset</a></h3>
+    </div>
+    <div id="RACE_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://www.cs.cmu.edu/~glai1/data/race/">RACE Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1704.04683.pdf">RACE: Large-scale ReAding Comprehension Dataset From Examinations</a></h3>
+    </div>
+    <div id="narrativeQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://github.com/deepmind/narrativeqa">NarrativeQA Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1712.07040.pdf">The NarrativeQA Reading Comprehension Challenge</a></h3>
+    </div>
+    <div id="duoRC_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://duorc.github.io/">DuoRC: A Large-Scale Dataset for Paraphrased Reading Comprehension</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1804.07927.pdf">DuoRC: Towards Complex Language Understanding with Paraphrased Reading Comprehension</a></h3>
+    </div>
+    <div id="DROP_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://allenai.org/data/drop">Discrete Reasoning Over the content of Paragraphs (DROP)</a></h3>
+      <h3>Paper: <a href="https://www.semanticscholar.org/paper/DROP%3A-A-Reading-Comprehension-Benchmark-Requiring-Dua-Wang/dda6fb309f62e2557a071522354d8c2c897a2805">DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs</a></h3>
+    </div>
+    <div id="cosmosQA_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://wilburone.github.io/cosmos/">Cosmos QA Dataset</a></h3>
+      <h3>Paper: <a href="https://arxiv.org/pdf/1909.00277.pdf">Cosmos QA: Machine Reading Comprehension with Contextual Commonsense Reasoning</a></h3>
+    </div>
+    <div id="ReClor_links" class="links" style="display:none;">
+      <h3>Website: <a href="https://whyu.me/reclor/">ReClor Dataset</a></h3>
+      <h3>Paper: <a href="https://openreview.net/pdf?id=HJgJtT4tvB">ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning</a></h3>
     </div>
   </div>
 
@@ -560,7 +648,6 @@ function load_data(ds) {
   var ds_sum = "./data/"+ds+"summary.csv";
   get_summary(ds_sum);
   update_graphs(ds);
-
 }
 
 function get_param() {

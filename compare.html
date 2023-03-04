@@ -47,6 +47,64 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
     <a href="./compare.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey w3-white">Compare Dataset Tool</a>
   </div>
 </div>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-dark-grey w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme w3-hover-dark-grey w3-padding-16"> Dataset Visualizing Tool </a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Open Questions <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="GoT" href="./details.html?ds=GoT" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Game of Thrones </a>
+        <a id="SQA" href="./details.html?ds=SQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Simple Question </a>
+        <a id="trecQA" href="./details.html?ds=trecQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">TREC </a>
+        <a id="tweetQA" href="./details.html?ds=tweetQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">TweetQA </a>
+        <a id="wikiQA" href="./details.html?ds=wikiQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">WikiQA </a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Long/Short Answers <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="AQA" href="./details.html?ds=AQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">AdversarialQA </a>
+        <a id="NQ" href="./details.html?ds=NQ" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Natural Questions </a>
+        <a id="searchQA" href="./details.html?ds=searchQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">SearchQA </a>
+        <a id="SQuAD" href="./details.html?ds=SQuAD" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">SQuAD </a>
+        <a id="triviaQA" href="./details.html?ds=triviaQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">TriviaQA </a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Multiple Choice Answers <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="ARC" href="./details.html?ds=ARC" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">ARC </a>
+        <a id="CODAH" href="./details.html?ds=CODAH" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">CODAH </a>
+        <a id="cosmosQA" href="./details.html?ds=cosmosQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">CosmosQA </a>
+        <a id="multiRC" href="./details.html?ds=multiRC" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Multi RC </a>
+        <a id="RACE" href="./details.html?ds=RACE" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">RACE </a>
+        <a id="ReClor" href="./details.html?ds=ReClor" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">ReClor </a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-padding-16">
+        Short Answers <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a id="DROP" href="./details.html?ds=DROP" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">DROP </a>
+        <a id="duoRC" href="./details.html?ds=duoRC" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">Duo RC </a>
+        <a id="hotpotQA" href="./details.html?ds=hotpotQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">HotpotQA </a>
+        <a id="MSMARCO" href="./details.html?ds=MSMARCO" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">MS MARCO </a>
+        <a id="narrativeQA" href="./details.html?ds=narrativeQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">NarrativeQA </a>
+        <a id="newsQA" href="./details.html?ds=newsQA" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey">News QA </a>
+      </div>
+    </div>
+    <a href="./compare.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-dark-grey w3-padding-16">Compare Dataset Tool</a>
+  </div>
+</div>
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" id="mySidebar">
@@ -77,16 +135,28 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
             <h1 class="w3-text-teal">Dataset</h1>
             <select id="ds1" onchange="updateDS1(this.value)" class="w3-bar-item w3-button w3-card-4 w3-bar-block">
               <option value="">Choose one Dataset</option>
-              <option value="wikiQA">wikiQA</option>
-              <option value="NQ">Natura Questions</option>
-              <option value="trecQA">TREC</option>
               <option value="AQA">AdversarialQA</option>
-              <option value="SQA">Simple Question</option>
-              <option value="SQuAD">SQuAD</option>
+              <option value="ARC">ARC</option>
+              <option value="CODAH">CODAH</option>
+              <option value="cosmosQA">CosmosQA</option>
+              <option value="DROP">DROP</option>
+              <option value="duoRC">Duo RC</option>
               <option value="GoT">Game of Thrones</option>
-              <option value="triviaQA">TriviaQA</option>
+              <option value="hotpotQA">Hotpot QA</option>
+              <option value="MSMARCO">MS MARCO</option>
+              <option value="multiRC">Multi RC</option>
+              <option value="narrativeQA">Narrative QA</option>
+              <option value="NQ">Natural Questions</option>
+              <option value="newsQA">News QA</option>
+              <option value="RACE">RACE</option>
+              <option value="ReClor">ReClor</option>
+              <option value="SQA">Simple Question</option>
               <option value="searchQA">SearchQA</option>
+              <option value="SQuAD">SQuAD</option>
+              <option value="trecQA">TREC</option>
+              <option value="triviaQA">TriviaQA</option>
               <option value="tweetQA">TweetQA</option>
+              <option value="wikiQA">wikiQA</option>
             </select>
           </div>
         </div>
@@ -95,16 +165,28 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
             <h1 class="w3-text-teal">Dataset</h1>
             <select id="ds2" onchange="updateDS2(this.value)" class="w3-bar-item w3-button w3-card-4 w3-bar-block">
               <option value="">Choose one Dataset</option>
-              <option value="wikiQA">wikiQA</option>
-              <option value="NQ">Natura Questions</option>
-              <option value="trecQA">TREC</option>
               <option value="AQA">AdversarialQA</option>
-              <option value="SQA">Simple Question</option>
-              <option value="SQuAD">SQuAD</option>
+              <option value="ARC">ARC</option>
+              <option value="CODAH">CODAH</option>
+              <option value="cosmosQA">CosmosQA</option>
+              <option value="DROP">DROP</option>
+              <option value="duoRC">Duo RC</option>
               <option value="GoT">Game of Thrones</option>
-              <option value="triviaQA">TriviaQA</option>
+              <option value="hotpotQA">Hotpot QA</option>
+              <option value="MSMARCO">MS MARCO</option>
+              <option value="multiRC">Multi RC</option>
+              <option value="narrativeQA">Narrative QA</option>
+              <option value="NQ">Natural Questions</option>
+              <option value="newsQA">News QA</option>
+              <option value="RACE">RACE</option>
+              <option value="ReClor">ReClor</option>
+              <option value="SQA">Simple Question</option>
               <option value="searchQA">SearchQA</option>
+              <option value="SQuAD">SQuAD</option>
+              <option value="trecQA">TREC</option>
+              <option value="triviaQA">TriviaQA</option>
               <option value="tweetQA">TweetQA</option>
+              <option value="wikiQA">wikiQA</option>
             </select>
           </div>
         </div>

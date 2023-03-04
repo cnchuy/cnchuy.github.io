@@ -1,0 +1,100 @@
+id,question,answer,label
+0,Why is this person asking about divorce ?,If he gets married in the church he wo nt have to get a divorce .,0
+0,Why is this person asking about divorce ?,He wants to get married to a different person .,1
+0,Why is this person asking about divorce ?,He wants to know if he does nt like this girl can he divorce her ?,0
+0,Why is this person asking about divorce ?,None of the above choices .,0
+1,Why is he worried about getting married ?,He was married before and she might come back one day .,1
+1,Why is he worried about getting married ?,He wants the girl he is going to marry get in trouble .,0
+1,Why is he worried about getting married ?,He knows that he will be committing polygamy .,0
+1,Why is he worried about getting married ?,None of the above choices .,0
+2,What may happen after the young man makes his call ?,An ambulance would likely come to the scene,1
+2,What may happen after the young man makes his call ?,The taxi would pick up the young man,0
+2,What may happen after the young man makes his call ?,None of the above choices .,0
+2,What may happen after the young man makes his call ?,The bus would arrive at the stop soon,0
+3,What may happen after the young man makes his call ?,None of the above choices .,0
+3,What may happen after the young man makes his call ?,The bus would arrive at the stop soon,0
+3,What may happen after the young man makes his call ?,The taxi would pick up the young man,0
+3,What may happen after the young man makes his call ?,Medical personnel would come to help the old man,1
+4,What may have happened to the old man ?,He was waiting on a ride,0
+4,What may have happened to the old man ?,He likely fell on the sidewalk and hit his head while intoxicated,1
+4,What may have happened to the old man ?,He was waiting on the taxi,0
+4,What may have happened to the old man ?,None of the above choices .,0
+5,What may have happened to the old man ?,None of the above choices .,1
+5,What may have happened to the old man ?,He was waiting on the taxi,0
+5,What may have happened to the old man ?,He was waiting for the bus,0
+5,What may have happened to the old man ?,He was waiting on a ride,0
+6,Why did the school bus not show up until 20 til 8 ?,Because it was late .,1
+6,Why did the school bus not show up until 20 til 8 ?,Because the writer mentioned it yesterday .,0
+6,Why did the school bus not show up until 20 til 8 ?,Because Little Miss was 25 minutes late for school .,0
+6,Why did the school bus not show up until 20 til 8 ?,Because it was 10 minutes before the start of school .,0
+7,What may have caused your feeling of serenity ?,I was able to separate myself from the wold .,1
+7,What may have caused your feeling of serenity ?,I was driving my car at a cool 30 mph .,0
+7,What may have caused your feeling of serenity ?,I started thinking about the six billion people in the world .,0
+7,What may have caused your feeling of serenity ?,I was meditating and felt serenity .,0
+8,Why is it so important that Tater does well in school ?,So he makes me look good to the school that I graduated from .,0
+8,Why is it so important that Tater does well in school ?,It is realistically not important at all but I like it .,0
+8,Why is it so important that Tater does well in school ?,It allows me to be able to brag to other people about him .,0
+8,Why is it so important that Tater does well in school ?,It is a precursor to understanding his success in future endeavors .,1
+9,How would this person be classified ?,Moderate,1
+9,How would this person be classified ?,Liberal,0
+9,How would this person be classified ?,Conservative,0
+9,How would this person be classified ?,None of the above choices .,0
+10,How would this person be classified ?,None of the above choices .,0
+10,How would this person be classified ?,Liberal,0
+10,How would this person be classified ?,Conservative,0
+10,How would this person be classified ?,Indpendent,1
+11,What may be a result of her watching the event ?,she becomes angry with her husband,0
+11,What may be a result of her watching the event ?,She confirms her biases,0
+11,What may be a result of her watching the event ?,She makes informed decisions,1
+11,What may be a result of her watching the event ?,None of the above choices .,0
+12,What may have caused your throat to be raw ?,There 's some germs in there .,1
+12,What may have caused your throat to be raw ?,My throat is infected .,0
+12,What may have caused your throat to be raw ?,None of the above choices .,0
+12,What may have caused your throat to be raw ?,It feels that way after I use my inhaler .,0
+13,Why did you exit the plane from a float ?,The pilot wanted to test out the floats and decided to use them,0
+13,Why did you exit the plane from a float ?,The pilot was running a test landing and wanted to see how we did exiting via the floats,0
+13,Why did you exit the plane from a float ?,None of the above choices .,0
+13,Why did you exit the plane from a float ?,The plane had to have an emergency landing and that meant they used an emergency landing procedure which involved the floats,1
+14,Is it important to Baby E to have his photo taken ?,It makes no difference to Baby E what is going on around him .,1
+14,Is it important to Baby E to have his photo taken ?,Baby E is excited to have is his photo taken no matter the time .,0
+14,Is it important to Baby E to have his photo taken ?,Baby E was annoyed with the quality of the 3 month photos and wanted to redo them .,0
+14,Is it important to Baby E to have his photo taken ?,None of the above choices .,0
+15,Is it important to Baby E to have his photo taken ?,Baby E is excited to have is his photo taken no matter the time .,0
+15,Is it important to Baby E to have his photo taken ?,Baby E was annoyed with the quality of the 3 month photos and wanted to redo them .,0
+15,Is it important to Baby E to have his photo taken ?,Baby E has a personality that likes to go to town shooting photos .,0
+15,Is it important to Baby E to have his photo taken ?,None of the above choices .,1
+16,Why is it a good idea to shop for insurance regularly ?,Sometimes your current insurance will be too complacent with you .,0
+16,Why is it a good idea to shop for insurance regularly ?,None of the above choices .,0
+16,Why is it a good idea to shop for insurance regularly ?,You need to keep your insurance provider on their toes .,0
+16,Why is it a good idea to shop for insurance regularly ?,It helps make sure that you are getting the best deal possible .,1
+17,Why did the writer have a problem with the mouse pads ?,They picked the pads up at promotion booths,0
+17,Why did the writer have a problem with the mouse pads ?,They were too small for FPS gaming,1
+17,Why did the writer have a problem with the mouse pads ?,Their feelings have been changed since trying the Evo - G MP1 pad,0
+17,Why did the writer have a problem with the mouse pads ?,They 've never been picky about mouse pads,0
+18,What 's a possible reason the writer does n't look disabled on the outside ?,Because an incident report would be sent to RTD and to the ADA .,0
+18,What 's a possible reason the writer does n't look disabled on the outside ?,Because he does need any special equipment to move around .,1
+18,What 's a possible reason the writer does n't look disabled on the outside ?,None of the above choices .,0
+18,What 's a possible reason the writer does n't look disabled on the outside ?,Because the writer wrote RTD an e - mail .,0
+19,Why did Amelia ask this question ?,Santa was granting wishes and Amelia wished for it .,0
+19,Why did Amelia ask this question ?,None of the above choices .,0
+19,Why did Amelia ask this question ?,She wanted the Cinderella costume for Christmas .,1
+19,Why did Amelia ask this question ?,Amelia specifically wanted to undermine her mom .,0
+20,What did you do after realizing that your things were stolen ?,I set about reporting the theft to the campus security but I knew nothing would come of it,1
+20,What did you do after realizing that your things were stolen ?,I bought the replacements immediately,0
+20,What did you do after realizing that your things were stolen ?,I let it go because I thought there was no point doing anything,0
+20,What did you do after realizing that your things were stolen ?,None of the above choices .,0
+21,Why did you receive more complete compliments from the groups you were more interested in ?,Those groups happened to give better feedback because they were just better,0
+21,Why did you receive more complete compliments from the groups you were more interested in ?,I think I worked harder in those groups and so it was easier to provide more complete compliments for those,1
+21,Why did you receive more complete compliments from the groups you were more interested in ?,Those groups cared more about their members than other groups,0
+21,Why did you receive more complete compliments from the groups you were more interested in ?,Those groups wanted to make me happy by giving me more complete compliments,0
+22,Why are my bills overwhelming me and the money stopped coming ?,I lost my well paying job .,1
+22,Why are my bills overwhelming me and the money stopped coming ?,I lost my vacation days .,0
+22,Why are my bills overwhelming me and the money stopped coming ?,I ca n't get off medical leave .,0
+22,Why are my bills overwhelming me and the money stopped coming ?,I am taking a sabbatical .,0
+23,Why are my bills overwhelming me and the money stopped coming ?,I ca n't get off medical leave .,0
+23,Why are my bills overwhelming me and the money stopped coming ?,I am taking a sabbatical .,0
+23,Why are my bills overwhelming me and the money stopped coming ?,I lost my vacation days .,0
+23,Why are my bills overwhelming me and the money stopped coming ?,I ca n't get a new job .,1
+24,Why do we know practically nothing about flowers ?,Because this weekend we visited a friend .,0
+24,Why do we know practically nothing about flowers ?,None of the above choices .,1
+24,Why do we know practically nothing about flowers ?,Because we discovered a bottle of Mrs. Meyer 's geranium liquid hand soap .,0

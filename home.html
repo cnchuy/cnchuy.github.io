@@ -14,174 +14,395 @@
     <h1>Datasets</h1>
     <p>Choose a dataset that you are interested in.</p><br>
 
-
-    <div class="w3-row-padding w3-center">
-      <a href="./details.html?ds=trecQA">
-        <div class="w3-col w3-margin-bottom" style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">TREC</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Open</li>
-            <li class="w3-padding-16"><b>Question: </b>Queries & Editors</li>
-            <li class="w3-padding-16"><b>Answer: </b>Experts Selected</li>
-            <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
-            <li class="w3-padding-16"><b>Size: </b>40K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Answer Selection</li>
-            <li class="w3-padding-16"><b>Published: </b>2007</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=wikiQA">
-        <div class="w3-col w3-margin-bottom" style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme-l2">
-              <p class="w3-xlarge">WikiQA</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Open</li>
-            <li class="w3-padding-16"><b>Question: </b>User Queries</li>
-            <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
-            <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
-            <li class="w3-padding-16"><b>Size: </b>10K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Answer Selection</li>
-            <li class="w3-padding-16"><b>Published: </b>2015</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=SQA">
-        <div class="w3-col w3-margin-bottom" style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">Simple Question</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Freebase</li>
-            <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
-            <li class="w3-padding-16"><b>Answer: </b>Knowledge Graph Entity</li>
-            <li class="w3-padding-16"><b>Answer Format: </b>Span of Words</li>
-            <li class="w3-padding-16"><b>Size: </b>100K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Knowlege Graph Extraction</li>
-            <li class="w3-padding-16"><b>Published: </b>2015</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=tweetQA">
-        <div class="w3-col w3-margin-bottom"  style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme-l2">
-              <p class="w3-xlarge">TweetQA</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Social Media</li>
-            <li class="w3-padding-16"><b>Question: </b>Human Generated</li>
-            <li class="w3-padding-16"><b>Answer: </b>Abstractive from Tweets</li>
-            <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
-            <li class="w3-padding-16"><b>Size: </b>12K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
-            <li class="w3-padding-16"><b>Published: </b>2019</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=GoT">
-        <div class="w3-col w3-margin-bottom"  style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">Game of Thrones</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>TV Series</li>
-            <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
-            <li class="w3-padding-16"><b>Answer: </b>Expert Selected</li>
-            <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
-            <li class="w3-padding-16"><b>Size: </b>10K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Answer Selection</li>
-            <li class="w3-padding-16"><b>Published: </b>2022</li>
-          </ul>
-        </div>
-      </a>
+    <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-center">Open Questions</button>
+    <div id="Demo1" class="w3-hide">
+      <div class="w3-row-padding w3-center">
+        <a href="./details.html?ds=trecQA">
+          <div class="w3-col w3-margin-bottom" style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">TREC</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Open</li>
+              <li class="w3-padding-16"><b>Question: </b>Queries & Editors</li>
+              <li class="w3-padding-16"><b>Answer: </b>Experts Selected</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
+              <li class="w3-padding-16"><b>Size: </b>40K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Answer Selection</li>
+              <li class="w3-padding-16"><b>Published: </b>2007</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=wikiQA">
+          <div class="w3-col w3-margin-bottom" style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">WikiQA</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Open</li>
+              <li class="w3-padding-16"><b>Question: </b>User Queries</li>
+              <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
+              <li class="w3-padding-16"><b>Size: </b>10K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Answer Selection</li>
+              <li class="w3-padding-16"><b>Published: </b>2015</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=SQA">
+          <div class="w3-col w3-margin-bottom" style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">Simple Question</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Freebase</li>
+              <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer: </b>Knowledge Graph Entity</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Span of Words</li>
+              <li class="w3-padding-16"><b>Size: </b>100K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Knowlege Graph Extraction</li>
+              <li class="w3-padding-16"><b>Published: </b>2015</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=tweetQA">
+          <div class="w3-col w3-margin-bottom"  style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">TweetQA</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Social Media</li>
+              <li class="w3-padding-16"><b>Question: </b>Human Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Abstractive from Tweets</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
+              <li class="w3-padding-16"><b>Size: </b>12K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2019</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=GoT">
+          <div class="w3-col w3-margin-bottom"  style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">Game of Thrones</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>TV Series</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Expert Selected</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Sentences</li>
+              <li class="w3-padding-16"><b>Size: </b>10K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Answer Selection</li>
+              <li class="w3-padding-16"><b>Published: </b>2022</li>
+            </ul>
+          </div>
+        </a>
+      </div>
     </div>
-
-    <div class="w3-row-padding w3-center">
-
-      <a href="./details.html?ds=SQuAD">
-        <div class="w3-col w3-margin-bottom"  style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme-l2">
-              <p class="w3-xlarge">SQuAD</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Wikipedia</li>
-            <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
-            <li class="w3-padding-16"><b>Answer: </b>Extractive from Long Answer</li>
-            <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Paragraph) and <br>Short Answer (Entities)</li>
-            <li class="w3-padding-16"><b>Size: </b>100K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
-            <li class="w3-padding-16"><b>Published: </b>2016</li>
-          </ul>
+    <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-center">Long/Short Answers</button>
+    <div id="Demo2" class="w3-hide">
+      <div class="w3-row-padding w3-center">
+        <a href="./details.html?ds=SQuAD">
+          <div class="w3-col w3-margin-bottom"  style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">SQuAD</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Wikipedia</li>
+              <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer: </b>Extractive from Long Answer</li>
+              <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Paragraph) and <br>Short Answer (Entities)</li>
+              <li class="w3-padding-16"><b>Size: </b>100K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2016</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=triviaQA">
+          <div class="w3-col w3-margin-bottom"  style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">TriviaQA</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Open</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Extractive from Long Answer</li>
+              <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Documents) and <br>Short Answer (Span of Words)</li>
+              <li class="w3-padding-16"><b>Size: </b>95K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2017</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=searchQA">
+          <div class="w3-col w3-margin-bottom"  style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">SearchQA</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Jeopardy</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer Format: </b><br>Evidence (URLs) and <br>Short Answer (Span of Words)</li>
+              <li class="w3-padding-16"><b>Size: </b>140K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Machine Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2017</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=NQ">
+          <div class="w3-col w3-margin-bottom" style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">Natural Questions</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Open</li>
+              <li class="w3-padding-16"><b>Question: </b>User Queries</li>
+              <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Paragraph) and <br>Short Answer (Entities)</li>
+              <li class="w3-padding-16"><b>Size: </b>90K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2019</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=AQA">
+          <div class="w3-col w3-margin-bottom" style="width:20%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">AdversarialQA</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Wikipedia</li>
+              <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer: </b>Human Generated</li>
+              <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Paragraph) and <br>Short Answer (Entities)</li>
+              <li class="w3-padding-16"><b>Size: </b>12K</li>
+              <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2020</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-center">Multiple Choice Answers</button>
+    <div id="Demo3" class="w3-hide">
+      <div class="w3-row-padding w3-center">
+        <a href="./details.html?ds=RACE">
+          <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">RACE</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Examinations</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Multiple Choice</li>
+              <li class="w3-padding-16"><b>Size: </b>100K</li>
+              <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2017</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=ARC">
+          <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">ARC</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Grade School (Science)</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Multiple Choice</li>
+              <li class="w3-padding-16"><b>Size: </b>7,787</li>
+              <li class="w3-padding-16"><b>Formulation: </b><br>Machine Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2018</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=multiRC">
+          <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">Multi RC</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>7 different sources</li>
+              <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer Format: </b> Answer Options </li>
+              <li class="w3-padding-16"><b>Size: </b>6K</li>
+              <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2018</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=CODAH">
+          <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">CODAH</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Common Sense</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Multiple Choice</li>
+              <li class="w3-padding-16"><b>Size: </b>2,801</li>
+              <li class="w3-padding-16"><b>Formulation: </b><br>Sentence Completion</li>
+              <li class="w3-padding-16"><b>Published: </b>2019</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=cosmosQA">
+          <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme">
+                <p class="w3-xlarge">Cosmos QA</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Blog</li>
+              <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Multiple Choice </li>
+              <li class="w3-padding-16"><b>Size: </b>35.6K</li>
+              <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension </li>
+              <li class="w3-padding-16"><b>Published: </b>2019</li>
+            </ul>
+          </div>
+        </a>
+        <a href="./details.html?ds=ReClor">
+          <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+              <li class="w3-theme-l2">
+                <p class="w3-xlarge">ReClor</p>
+              </li>
+              <li class="w3-padding-16"><b>Domain: </b>Examinations</li>
+              <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
+              <li class="w3-padding-16"><b>Answer Format: </b>Multiple Choice</li>
+              <li class="w3-padding-16"><b>Size: </b>6K</li>
+              <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+              <li class="w3-padding-16"><b>Published: </b>2020</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button onclick="myAccFunc('Demo4')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-center">Short Answers</button>
+    <div id="Demo4" class="w3-hide">
+      <div class="w3-container">
+        <div class="w3-row-padding w3-center">
+          <a href="./details.html?ds=MSMARCO">
+            <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+              <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme-l2">
+                  <p class="w3-xlarge">MS MARCO</p>
+                </li>
+                <li class="w3-padding-16"><b>Domain: </b>Open</li>
+                <li class="w3-padding-16"><b>Question: </b>Bing Queries</li>
+                <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
+                <li class="w3-padding-16"><b>Answer Format: </b><br>Complete Sentence</li>
+                <li class="w3-padding-16"><b>Size: </b>100K</li>
+                <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+                <li class="w3-padding-16"><b>Published: </b>2016</li>
+              </ul>
+            </div>
+          </a>
+          <a href="./details.html?ds=newsQA">
+            <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+              <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme">
+                  <p class="w3-xlarge">NewsQA</p>
+                </li>
+                <li class="w3-padding-16"><b>Domain: </b>CNN</li>
+                <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+                <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+                <li class="w3-padding-16"><b>Answer Format: </b><br>Short Answer</li>
+                <li class="w3-padding-16"><b>Size: </b>100K</li>
+                <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+                <li class="w3-padding-16"><b>Published: </b>2017</li>
+              </ul>
+            </div>
+          </a>
+          <a href="./details.html?ds=narrativeQA">
+            <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+              <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme-l2">
+                  <p class="w3-xlarge">NarrativeQA</p>
+                </li>
+                <li class="w3-padding-16"><b>Domain: </b>Books and Movie Scripts</li>
+                <li class="w3-padding-16"><b>Question: </b>Human Generated</li>
+                <li class="w3-padding-16"><b>Answer: </b>Human Generated</li>
+                <li class="w3-padding-16"><b>Answer Format: </b><br>Short Answer</li>
+                <li class="w3-padding-16"><b>Size: </b>46K</li>
+                <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+                <li class="w3-padding-16"><b>Published: </b>2017</li>
+              </ul>
+            </div>
+          </a>
+          <a href="./details.html?ds=hotpotQA">
+            <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+              <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme">
+                  <p class="w3-xlarge">Hotpot QA</p>
+                </li>
+                <li class="w3-padding-16"><b>Domain: </b>Wikipedia</li>
+                <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+                <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+                <li class="w3-padding-16"><b>Answer Format: </b><br>Short Answer</li>
+                <li class="w3-padding-16"><b>Size: </b>113K</li>
+                <li class="w3-padding-16"><b>Formulation: </b><br>Complex Reasoning</li>
+                <li class="w3-padding-16"><b>Published: </b>2018</li>
+              </ul>
+            </div>
+          </a>
+          <a href="./details.html?ds=duoRC">
+            <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+              <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme-l2">
+                  <p class="w3-xlarge">DuoRC</p>
+                </li>
+                <li class="w3-padding-16"><b>Domain: </b> Movie Plots </li>
+                <li class="w3-padding-16"><b>Question: </b>Human Generated</li>
+                <li class="w3-padding-16"><b>Answer: </b>Human Generated</li>
+                <li class="w3-padding-16"><b>Answer Format: </b><br>Short Answer</li>
+                <li class="w3-padding-16"><b>Size: </b>186K</li>
+                <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+                <li class="w3-padding-16"><b>Published: </b>2018</li>
+              </ul>
+            </div>
+          </a>
+          <a href="./details.html?ds=DROP">
+            <div class="w3-col w3-margin-bottom"  style="width:16.6%">
+              <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme">
+                  <p class="w3-xlarge">DROP</p>
+                </li>
+                <li class="w3-padding-16"><b>Domain: </b>Wikipedia</li>
+                <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
+                <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
+                <li class="w3-padding-16"><b>Answer Format: </b><br>Short Answer</li>
+                <li class="w3-padding-16"><b>Size: </b>96K</li>
+                <li class="w3-padding-16"><b>Formulation: </b><br>Reading Comprehension</li>
+                <li class="w3-padding-16"><b>Published: </b>2019</li>
+              </ul>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="./details.html?ds=triviaQA">
-        <div class="w3-col w3-margin-bottom"  style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">TriviaQA</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Open</li>
-            <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
-            <li class="w3-padding-16"><b>Answer: </b>Extractive from Long Answer</li>
-            <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Documents) and <br>Short Answer (Span of Words)</li>
-            <li class="w3-padding-16"><b>Size: </b>95K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
-            <li class="w3-padding-16"><b>Published: </b>2017</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=searchQA">
-        <div class="w3-col w3-margin-bottom"  style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme-l2">
-              <p class="w3-xlarge">SearchQA</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Jeopardy</li>
-            <li class="w3-padding-16"><b>Question: </b>Expert Generated</li>
-            <li class="w3-padding-16"><b>Answer: </b>Expert Generated</li>
-            <li class="w3-padding-16"><b>Answer Format: </b><br>Evidence (URLs) and <br>Short Answer (Span of Words)</li>
-            <li class="w3-padding-16"><b>Size: </b>140K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Machine Comprehension</li>
-            <li class="w3-padding-16"><b>Published: </b>2017</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=NQ">
-        <div class="w3-col w3-margin-bottom" style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">Natural Questions</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Open</li>
-            <li class="w3-padding-16"><b>Question: </b>User Queries</li>
-            <li class="w3-padding-16"><b>Answer: </b>Crowd Sourced</li>
-            <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Paragraph) and <br>Short Answer (Entities)</li>
-            <li class="w3-padding-16"><b>Size: </b>90K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
-            <li class="w3-padding-16"><b>Published: </b>2019</li>
-          </ul>
-        </div>
-      </a>
-      <a href="./details.html?ds=AQA">
-        <div class="w3-col w3-margin-bottom" style="width:20%">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme-l2">
-              <p class="w3-xlarge">AdversarialQA</p>
-            </li>
-            <li class="w3-padding-16"><b>Domain: </b>Wikipedia</li>
-            <li class="w3-padding-16"><b>Question: </b>Crowd Sourced</li>
-            <li class="w3-padding-16"><b>Answer: </b>Human Generated</li>
-            <li class="w3-padding-16"><b>Answer Format: </b><br>Long Answer (Paragraph) and <br>Short Answer (Entities)</li>
-            <li class="w3-padding-16"><b>Size: </b>12K</li>
-            <li class="w3-padding-16"><b>Formulation: </b>Reading Comprehension</li>
-            <li class="w3-padding-16"><b>Published: </b>2020</li>
-          </ul>
-        </div>
-      </a>
+      </div>
     </div>
   </div>
+
+  <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+  <script>
+  // Accordions
+  function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+
 
 </body>
 </html>
