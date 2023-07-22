@@ -173,28 +173,36 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
             <h1 class="w3-text-teal">Dataset</h1>
             <select id="ds2" onchange="updateDS2(this.value)" class="w3-bar-item w3-button w3-card-4 w3-bar-block">
               <option value="">Choose one Dataset</option>
-              <option value="AQA">AdversarialQA</option>
-              <option value="ARC">ARC</option>
-              <option value="CODAH">CODAH</option>
-              <option value="cosmosQA">CosmosQA</option>
-              <option value="DROP">DROP</option>
-              <option value="duoRC">Duo RC</option>
-              <option value="GoT">Game of Thrones</option>
-              <option value="hotpotQA">Hotpot QA</option>
-              <option value="MSMARCO">MS MARCO</option>
-              <option value="multiRC">Multi RC</option>
-              <option value="narrativeQA">Narrative QA</option>
-              <option value="NQ">Natural Questions</option>
-              <option value="newsQA">News QA</option>
-              <option value="RACE">RACE</option>
-              <option value="ReClor">ReClor</option>
-              <option value="SQA">Simple Question</option>
-              <option value="searchQA">SearchQA</option>
-              <option value="SQuAD">SQuAD</option>
-              <option value="trecQA">TREC</option>
-              <option value="triviaQA">TriviaQA</option>
-              <option value="tweetQA">TweetQA</option>
-              <option value="wikiQA">wikiQA</option>
+              <optgroup label="Open Questions">
+                <option value="GoT">Game of Thrones</option>  
+                <option value="SQA">Simple Question</option>
+                <option value="trecQA">TREC</option>
+                <option value="tweetQA">TweetQA</option>
+                <option value="wikiQA">wikiQA</option>
+              </optgroup>
+              <optgroup label="Long/Short Answers">
+                <option value="AQA">AdversarialQA</option>  
+                <option value="NQ">Natural Questions</option>
+                <option value="searchQA">SearchQA</option>
+                <option value="SQuAD">SQuAD</option>
+                <option value="triviaQA">TriviaQA</option>
+              </optgroup>
+              <optgroup label="Multiple Choice Answers">
+                <option value="ARC">ARC</option>
+                <option value="CODAH">CODAH</option>
+                <option value="cosmosQA">CosmosQA</option>
+                <option value="multiRC">Multi RC</option>
+                <option value="RACE">RACE</option>
+                <option value="ReClor">ReClor</option>
+              </optgroup>
+              <optgroup label="Short Answers">
+                <option value="DROP">DROP</option>
+                <option value="duoRC">Duo RC</option>
+                <option value="hotpotQA">Hotpot QA</option>
+                <option value="MSMARCO">MS MARCO</option>
+                <option value="narrativeQA">Narrative QA</option>
+                <option value="newsQA">News QA</option>
+              </optgroup>
             </select>
           </div>
         </div>
